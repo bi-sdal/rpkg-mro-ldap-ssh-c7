@@ -1,5 +1,46 @@
 cran_pkgs <- c(
-    'randtests'
+    cran_pkgs <- c(
+    # GIS packages
+    'rgdal',
+    'rgeos',
+    'tigris',
+    'osmar',
+    'tmap',
+    'tmaptools',
+    'sp',
+    #
+    'magrittr',
+    'DBI',
+    'RPostgreSQL',
+    'tidyverse',
+    'ggthemes',
+    'rmarkdown',
+    'curl',
+    'httr',
+    'rio',
+    'devtools',
+    'bigmemory',
+    'biganalytics',
+    'data.table',
+    'shiny',
+    'shinydashboard',
+    'flexdashboard',
+    'DT',
+    'leaflet',
+    'highcharter',
+    'GGally',
+    'glmnet',
+    'useful',
+    'coefplot',
+    'rpart.plot',
+    'randomForest',
+    'RJSONIO',
+    'PKI',
+    'packrat',
+    'rsconnect',
+    'rstan',
+    'ggmap'
+)
 )
 
 install_error_message <- 
