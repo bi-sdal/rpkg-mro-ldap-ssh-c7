@@ -7,13 +7,20 @@ RUN useradd --create-home --shell /bin/bash rpkgs
 USER rpkgs
 WORKDIR /home/rpkgs
 
-RUN wget https://raw.githubusercontent.com/bi-sdal/dockerfiles/master/install.R && \
-    mkdir rpkgs && echo "rpkgs created" &&\
-    echo ".libPaths('~/rpkgs')" >> ~/.Rprofile && \
+COPY install_cran.R install_cran.R
+COPY install_github.R install_github.R
+
+RUN mkdir rpkgs && echo "rpkgs created" && \
+    echo ".libPaths('/home/rpkgs/rpkgs')" >> /home/rpkgs/.Rprofile && \
     Rscript -e "print(.libPaths())" && \
-    Rscript install.sh && \
-    ls -alh /home/rpkgs/rpkgs
+    ls -alh /home/rpkgs
+
+RUN Rscript install_cran.R
+RUN Rscript install_github.R
 
 USER root
+
+RUN ls -alh /home/rpkgs/rpkgs && \
+    echo ".libPaths('/home/rpkgs/rpkgs')" >> ~/.Rprofile
 
 CMD ["/usr/sbin/init"]
