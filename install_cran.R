@@ -30,6 +30,8 @@ cran_pkgs <- c(
     'leaflet',
     'highcharter',
     'plotly',
+    'ggvis',
+    'dygraphs',
     'GGally',
     'glmnet',
     'useful',
