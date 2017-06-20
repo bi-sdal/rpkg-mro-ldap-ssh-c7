@@ -23,6 +23,7 @@ cran_pkgs <- c(
     'bigmemory',
     'biganalytics',
     'data.table',
+    'sqldf',
     'shiny',
     'shinydashboard',
     'flexdashboard',
