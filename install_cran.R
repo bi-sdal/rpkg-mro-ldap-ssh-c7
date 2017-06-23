@@ -8,6 +8,7 @@ cran_pkgs <- c(
     'tmap',
     'tmaptools',
     'sp',
+    'mapview',
     #
     'magrittr',
     'DBI',
