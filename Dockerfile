@@ -4,6 +4,8 @@ MAINTAINER "Daniel Chen" <chend@vt.edu>
 
 RUN useradd --create-home --shell /bin/bash rpkgs
 
+RUN echo ".libPaths('/home/rpkgs/rpkgs')" >> /root/.Rprofile
+
 USER rpkgs
 WORKDIR /home/rpkgs
 
@@ -14,13 +16,5 @@ RUN mkdir rpkgs && echo "rpkgs created" && \
     echo ".libPaths('/home/rpkgs/rpkgs')" >> /home/rpkgs/.Rprofile && \
     Rscript -e "print(.libPaths())" && \
     ls -alh /home/rpkgs
-
-RUN Rscript install_cran.R
-RUN Rscript install_github.R
-
-USER root
-
-RUN ls -alh /home/rpkgs/rpkgs && \
-    echo ".libPaths('/home/rpkgs/rpkgs')" >> ~/.Rprofile
 
 CMD ["/usr/sbin/init"]
