@@ -45,7 +45,8 @@ cran_pkgs <- c(
     'packrat',
     'rsconnect',
     'rstan',
-    'ggmap'
+    'ggmap',
+    'rJava'
 )
 )
 
