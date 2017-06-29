@@ -46,7 +46,8 @@ cran_pkgs <- c(
     'rsconnect',
     'rstan',
     'ggmap',
-    'rJava'
+    'rJava',
+    'acs'
 )
 )
 
