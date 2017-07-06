@@ -1,5 +1,4 @@
 cran_pkgs <- c(
-    cran_pkgs <- c(
     # GIS packages
     'rgdal',
     'rgeos',
