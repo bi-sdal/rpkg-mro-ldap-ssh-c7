@@ -49,7 +49,6 @@ cran_pkgs <- c(
     'acs',
     'tidytext'
 )
-)
 
 install_error_message <- 
     "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
