@@ -47,7 +47,8 @@ cran_pkgs <- c(
     'rstan',
     'ggmap',
     'rJava',
-    'acs'
+    'acs',
+    'tidytext'
 )
 )
 
