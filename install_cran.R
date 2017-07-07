@@ -2,7 +2,6 @@ cran_pkgs <- c(
     # GIS packages
     'rgdal',
     'rgeos',
-    'tigris',
     'osmar',
     'tmap',
     'tmaptools',
