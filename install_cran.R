@@ -56,6 +56,7 @@ the_rest <- c(
     'PKI',
     'packrat',
     'rsconnect',
+    'rsvg',
     'acs'
 )
 
