@@ -1,6 +1,8 @@
 fury <- c(
+    'sf',
     'tigris',
-    'tmap'
+    'tmap',
+    'mapview'
 )
 
 tryCatch({
