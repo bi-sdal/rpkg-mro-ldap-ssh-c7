@@ -1,5 +1,6 @@
 fury <- c(
-    'tigris'
+    'tigris',
+    'tmap'
 )
 
 tryCatch({
