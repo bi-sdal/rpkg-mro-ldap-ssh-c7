@@ -11,9 +11,6 @@ RUN echo ".libPaths('/home/rpkgs/rpkgs')" >> /root/.Rprofile
 USER rpkgs
 WORKDIR /home/rpkgs
 
-COPY install_cran.R install_cran.R
-COPY install_github.R install_github.R
-
 RUN mkdir rpkgs && echo "rpkgs created" && \
     echo ".libPaths('/home/rpkgs/rpkgs')" >> /home/rpkgs/.Rprofile && \
     Rscript -e "print(.libPaths())" && \
