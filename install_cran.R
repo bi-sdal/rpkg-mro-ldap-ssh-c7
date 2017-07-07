@@ -1,28 +1,20 @@
-cran_pkgs <- c(
-    # GIS packages
+gis_pkgs <- c(
     'rgdal',
     'rgeos',
     'osmar',
-    'tmap',
     'tmaptools',
     'sp',
     'mapview',
-    #
+    'ggmap'
+)
+
+tidy_pkgs <- c(
     'magrittr',
-    'DBI',
-    'RPostgreSQL',
     'tidyverse',
-    'lubridate',
-    'ggthemes',
-    'rmarkdown',
-    'curl',
-    'httr',
-    'rio',
-    'devtools',
-    'bigmemory',
-    'biganalytics',
-    'data.table',
-    'sqldf',
+    'lubridate'
+)
+
+shiny_pkgs <- c(
     'shiny',
     'shinydashboard',
     'flexdashboard',
@@ -30,23 +22,45 @@ cran_pkgs <- c(
     'leaflet',
     'highcharter',
     'plotly',
-    'ggvis',
-    'dygraphs',
-    'GGally',
+    'ggvis'
+)
+
+io_pkgs <- c(
+    'DBI',
+    'RPostgreSQL',
+    'curl',
+    'httr',
+    'rio',
+    'bigmemory',
+    'biganalytics',
+    'data.table',
+    'sqldf',
+    'RJSONIO'
+)
+
+ml_pkgs <- c(
     'glmnet',
     'useful',
     'coefplot',
     'rpart.plot',
     'randomForest',
-    'RJSONIO',
+    'tidytext',
+    'rstan'
+)
+
+the_rest <- c(
+    'ggthemes',
+    'rmarkdown',
+    'devtools',
+    'dygraphs',
+    'GGally',
     'PKI',
     'packrat',
     'rsconnect',
-    'rstan',
-    'ggmap',
-    'acs',
-    'tidytext'
+    'acs'
 )
+
+cran_pkgs <- c(gis_pkgs, tidy_pkgs, shiny_pkgs, io_pkgs, ml_pkgs, the_rest)
 
 install_error_message <- 
     "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -76,6 +90,7 @@ tryCatch({
 }, error = function(e) {
     stop(install_error_message)
     Sys.sleep(10)
+    quit(save = "no", status = 1)
 })
 
 print("Finished Installing")
@@ -87,5 +102,6 @@ for (p in cran_pkgs){
     }, error = function(e) {
         stop(install_error_message)
         Sys.sleep(10)
+        quit(save = "no", status = 1)
     })
 }
