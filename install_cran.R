@@ -4,7 +4,6 @@ gis_pkgs <- c(
     'osmar',
     'tmaptools',
     'sp',
-    'mapview',
     'ggmap'
 )
 
