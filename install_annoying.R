@@ -1,3 +1,5 @@
+install.packages('udunits2', type = 'source', repo = 'cran.rstudio.com', configure.args = '--with-udunits2-include=/usr/include/udunits2 --with-udunits2-lib=/usr/local/lib')
+
 fury <- c(
     'sf',
     'tigris',
@@ -14,7 +16,7 @@ tryCatch({
 
 print("Finished Installing")
 
-for (p in cran_pkgs){
+for (p in fury){
     print(sprintf('Loading: %s', p))
     tryCatch({
         library(p, character.only = TRUE)
