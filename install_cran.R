@@ -56,8 +56,7 @@ the_rest <- c(
     'PKI',
     'packrat',
     'rsconnect',
-    'rsvg',
-    'acs'
+    'rsvg'
 )
 
 cran_pkgs <- c(gis_pkgs, tidy_pkgs, shiny_pkgs, io_pkgs, ml_pkgs, the_rest)
